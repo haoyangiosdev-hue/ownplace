@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ownplace Support</title>
+<meta name="description" content="Ownplace — your AI, on your own server. Setup help and contact.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav><a href="#en">English</a><a href="#zh">中文</a><a href="#ja">日本語</a><a href="privacy.html">Privacy Policy</a></nav>
+
+<section id="en">
+<h1>Ownplace</h1>
+<p class="sub">Your AI, on your own server.</p>
+<p>Ownplace is a personal AI that lives on a server you own. We don't run servers: the app sets up your server over SSH, and from then on your conversations, records and memories stay there.</p>
+
+<h2>Getting started</h2>
+<div class="card"><ol>
+<li>Rent a small Linux cloud server (1 CPU / 2 GB RAM is enough) that you can log into with SSH as root.</li>
+<li>In your cloud provider's firewall / security group, allow inbound TCP <code>22</code> (setup), <code>9443</code> (the app connects to your server) and, if you want friends, <code>8443</code>.</li>
+<li>Open Ownplace, choose <b>Own server</b>, enter the server address, user, password and port, then tap <b>Connect &amp; deploy</b>. The password is used only for this login.</li>
+<li>Set up a model: your own inference server, or an API key from a provider you trust. You can also skip and do it later.</li>
+</ol></div>
+
+<h2>Common questions</h2>
+<h3>The app can't reach my server during setup</h3>
+<p>Check the address and port, and that port 22 is open in your security group.</p>
+<h3>Setup finished but the app can't connect to my node</h3>
+<p>Allow inbound TCP 9443 in your security group.</p>
+<h3>Friends can't reach me</h3>
+<p>Allow inbound TCP 8443. You can still reach friends without it.</p>
+<h3>“No model set yet”</h3>
+<p>Open the role's settings and pick a model, or add one under <b>My machine → Models &amp; keys</b>.</p>
+<h3>“Your node's certificate changed”</h3>
+<p>Use <b>Check again over SSH</b> in the app. If you didn't reinstall the node yourself, don't continue — something may be between you and your server.</p>
+<h3>Does anything get sent to a third party?</h3>
+<p>Only if you choose a third-party model, and only after you agree for that specific role and provider. See the <a href="privacy.html">Privacy Policy</a>.</p>
+
+<h2>Contact</h2>
+<p>Email <a href="mailto:haoyangiosdev@gmail.com">haoyangiosdev@gmail.com</a>. To report abuse by another user, use <b>Report</b> on that friend's page in the app.</p>
+</section>
+
+<hr>
+
+<section id="zh" lang="zh-Hans">
+<h1>所在之处</h1>
+<p class="sub">你的 AI，住在你自己的服务器上。</p>
+<h2>开始使用</h2>
+<div class="card"><ol>
+<li>准备一台能用 SSH 以 root 登录的 Linux 云主机（1 核 2G 就够）。</li>
+<li>在云服务商的安全组 / 防火墙放行入站 TCP <code>22</code>（部署）、<code>9443</code>（App 连接）；要用好友功能再放行 <code>8443</code>。</li>
+<li>打开 App，选「自有主机」，填服务器地址、用户、密码、端口，点「连接并部署」。密码只用这一次。</li>
+<li>配一个模型：你自己的推理服务器，或你信得过的服务商的 API key；也可以先跳过。</li>
+</ol></div>
+<h2>常见问题</h2>
+<p><b>部署时连不上服务器</b>：检查地址、端口，以及安全组是否放行 22。<br>
+<b>部署完连不上节点</b>：放行 9443。<br>
+<b>好友连不上你</b>：放行 8443（不放行你仍能主动连好友）。<br>
+<b>「还没配模型」</b>：在角色设置里选一个，或到「我的机器 → 模型与密钥」添加。<br>
+<b>「节点证书变了」</b>：用 App 里的「经 SSH 重新核对」；如果你没有自己重装节点，先别继续。</p>
+<h2>联系</h2>
+<p>邮件 <a href="mailto:haoyangiosdev@gmail.com">haoyangiosdev@gmail.com</a>。举报其他用户请在 App 里该好友页点「举报」。</p>
+</section>
+
+<hr>
+
+<section id="ja" lang="ja">
+<h1>Ownplace</h1>
+<p class="sub">あなたのサーバーで動く、あなたのAI。</p>
+<h2>はじめかた</h2>
+<div class="card"><ol>
+<li>root で SSH ログインできる Linux クラウドサーバーを用意します（1 CPU / 2 GB RAM で十分）。</li>
+<li>セキュリティグループで受信 TCP <code>22</code>（セットアップ）と <code>9443</code>（アプリ接続）、友だち機能を使う場合は <code>8443</code> を許可します。</li>
+<li>アプリで「自分のサーバー」を選び、アドレス・ユーザー・パスワード・ポートを入力して「接続してデプロイ」。パスワードはこのログインにのみ使用します。</li>
+<li>モデルを設定：自前の推論サーバー、または信頼できる提供元の API キー。後からでも設定できます。</li>
+</ol></div>
+<h2>お問い合わせ</h2>
+<p><a href="mailto:haoyangiosdev@gmail.com">haoyangiosdev@gmail.com</a>。他のユーザーの迷惑行為は、アプリ内の友だちページの「報告」からお知らせください。</p>
+</section>
+
+<footer>© 2026 yang hao · <a href="privacy.html">Privacy Policy</a></footer>
+</main>
+</body>
+</html>
